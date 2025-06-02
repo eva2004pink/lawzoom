@@ -1,70 +1,184 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Avocat Online</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #f5f5f5, #e3e3e3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-      color: #333;
-    }
-
-    .container {
-      max-width: 600px;
-      padding: 20px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
-
-    .btn {
-      padding: 12px 24px;
-      font-size: 1rem;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      background-color: #0056b3;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-
-      p {
-        font-size: 1rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegalEdge Law | Online Consultations</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #1a3a6e, #0d2342);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .tagline {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        /* Button Styles */
+        .cta-button {
+            display: inline-block;
+            background-color: #e8b339;
+            color: #1a3a6e;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background-color: #f5c862;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .features h2 {
+            color: #1a3a6e;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+        
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .feature-item {
+            flex: 1 1 300px;
+            max-width: 350px;
+            padding: 30px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .feature-item i {
+            font-size: 2.5rem;
+            color: #e8b339;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .feature-item h3 {
+            color: #1a3a6e;
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1a3a6e;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .tagline {
+                font-size: 1.1rem;
+            }
+            
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Conectăm avocații cu clienții</h1>
-    <p>Stabilește o întâlnire online cu un avocat, direct prin Zoom sau Teams. Simplu, rapid și eficient.</p>
-    <a href="#" class="btn">Începe acum</a>
-  </div>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Expert Legal Consultation From Anywhere</h1>
+                <p class="tagline">Secure, confidential video consultations with experienced attorneys via Zoom or Microsoft Teams.</p>
+                <a href="#consultation" class="cta-button">Schedule Your Consultation</a>
+            </div>
+        </div>
+    </header>
+    
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose Online Legal Consultation?</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Convenient & Secure</h3>
+                    <p>Meet with your attorney from the comfort of your home or office through encrypted video platforms.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Book appointments at times that work for you, including evenings and weekends.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>Same Quality Service</h3>
+                    <p>Receive the same expert legal advice as in-person consultations at competitive rates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 LegalEdge Law Firm. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
-
