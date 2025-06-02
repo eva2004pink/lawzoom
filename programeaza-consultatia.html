@@ -155,73 +155,76 @@
                     </div>
                 </div>
                 
-                <form class="booking-form" id="consultationForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="nume">Nume*</label>
-                            <input type="text" id="nume" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="prenume">Prenume*</label>
-                            <input type="text" id="prenume" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="data_nasterii">Data nașterii*</label>
-                        <input type="date" id="data_nasterii" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="tara">Țara*</label>
-                        <select id="tara" required>
-                            <option value="">Selectează țara</option>
-                            <option value="RO">România</option>
-                            <option value="MD">Republica Moldova</option>
-                            <option value="UK">Regatul Unit</option>
-                            <option value="DE">Germania</option>
-                            <option value="SI">Spania</option>
-                            <option value="PT">Portugalia</option>
-                            <option value="IT">Italia</option>
-                            <option value="US">America</option>
-                            <option value="OT">Altă țară</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="telefon">Telefon*</label>
-                            <input type="tel" id="telefon" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email*</label>
-                            <input type="email" id="email" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="domeniu">Domeniul de drept*</label>
-                        <select id="domeniu" required>
-                            <option value="">Selectează domeniul</option>
-                            <option value="penal">Drept Penal</option>
-                            <option value="civil">Drept Civil</option>
-                            <option value="comercial">Drept Comercial</option>
-                            <option value="contracte">Drept Contractual</option>
-                            <option value="familie">Dreptul Familiei</option>
-                            <option value="munca">Dreptul Muncii</option>
-                            <option value="proprietate">Drept de Proprietate</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="mesaj">Detalii suplimentare (opțional)</label>
-                        <textarea id="mesaj" rows="4"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Finalizează Programarea</button>
-                </form>
+              <form name="consultatie" method="POST" netlify class="booking-form" id="consultationForm">
+  <input type="hidden" name="form-name" value="consultatie" />
+  
+  <div class="form-row">
+    <div class="form-group">
+      <label for="nume">Nume*</label>
+      <input type="text" id="nume" name="nume" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="prenume">Prenume*</label>
+      <input type="text" id="prenume" name="prenume" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="data_nasterii">Data nașterii*</label>
+    <input type="date" id="data_nasterii" name="data_nasterii" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="tara">Țara*</label>
+    <select id="tara" name="tara" required>
+      <option value="">Selectează țara</option>
+      <option value="RO">România</option>
+      <option value="MD">Republica Moldova</option>
+      <option value="UK">Regatul Unit</option>
+      <option value="DE">Germania</option>
+      <option value="SI">Spania</option>
+      <option value="PT">Portugalia</option>
+      <option value="IT">Italia</option>
+      <option value="US">America</option>
+      <option value="OT">Altă țară</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="telefon">Telefon*</label>
+      <input type="tel" id="telefon" name="telefon" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email*</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="domeniu">Domeniul de drept*</label>
+    <select id="domeniu" name="domeniu" required>
+      <option value="">Selectează domeniul</option>
+      <option value="penal">Drept Penal</option>
+      <option value="civil">Drept Civil</option>
+      <option value="comercial">Drept Comercial</option>
+      <option value="contracte">Drept Contractual</option>
+      <option value="familie">Dreptul Familiei</option>
+      <option value="munca">Dreptul Muncii</option>
+      <option value="proprietate">Drept de Proprietate</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="mesaj">Detalii suplimentare (opțional)</label>
+    <textarea id="mesaj" name="mesaj" rows="4"></textarea>
+  </div>
+  
+  <button type="submit" class="submit-btn">Finalizează Programarea</button>
+</form>
+
             </div>
         </div>
     </section>
