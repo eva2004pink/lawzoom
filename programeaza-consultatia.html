@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Programare Consultația | Cabinet Avocat Alice Strecheanu</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet" />
     <style>
         /* Stiluri existente (păstrate identice) */
-        
         .booking-page {
             padding: 80px 0;
             background-color: #F5F0E5;
         }
-        
+
         .booking-container {
             max-width: 800px;
             margin: 0 auto;
@@ -23,7 +22,7 @@
             border-radius: 4px;
             box-shadow: 0 5px 25px rgba(0,0,0,0.1);
         }
-        
+
         .booking-title {
             font-family: 'Cinzel Decorative', serif;
             color: #3E2723;
@@ -33,13 +32,13 @@
             border-bottom: 2px solid #8D6E63;
             padding-bottom: 15px;
         }
-        
+
         .duration-options {
             display: flex;
             justify-content: space-between;
             margin-bottom: 30px;
         }
-        
+
         .duration-option {
             flex: 0 0 30%;
             text-align: center;
@@ -49,39 +48,39 @@
             cursor: pointer;
             transition: all 0.3s;
         }
-        
+
         .duration-option:hover, .duration-option.selected {
             border-color: #8D6E63;
             background: #EFEBE9;
         }
-        
+
         .duration-option h3 {
             font-family: 'Cormorant Garamond', serif;
             color: #3E2723;
             margin-bottom: 10px;
         }
-        
+
         .duration-option .price {
             font-weight: 600;
             color: #5D4037;
             font-size: 1.2rem;
         }
-        
+
         .booking-form {
             margin-top: 30px;
         }
-        
+
         .form-group {
             margin-bottom: 20px;
         }
-        
+
         .form-group label {
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
             color: #3E2723;
         }
-        
+
         .form-group input, 
         .form-group select, 
         .form-group textarea {
@@ -92,16 +91,16 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 1rem;
         }
-        
+
         .form-row {
             display: flex;
             gap: 20px;
         }
-        
+
         .form-row .form-group {
             flex: 1;
         }
-        
+
         .submit-btn {
             background-color: #8D6E63;
             color: white;
@@ -113,118 +112,117 @@
             margin-top: 20px;
             transition: background 0.3s;
         }
-        
+
         .submit-btn:hover {
             background-color: #6D4C41;
         }
-        
+
         @media (max-width: 768px) {
             .duration-options {
                 flex-direction: column;
                 gap: 15px;
             }
-            
+
             .form-row {
                 flex-direction: column;
                 gap: 0;
             }
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body>
     <section class="booking-page">
         <div class="container">
             <div class="booking-container">
                 <h2 class="booking-title">Programează Consultația</h2>
-                
+
                 <div class="duration-options">
                     <div class="duration-option selected" data-duration="30" data-price="200">
                         <h3>30 minute</h3>
                         <p class="price">200 RON</p>
                     </div>
-                    
+
                     <div class="duration-option" data-duration="60" data-price="380">
                         <h3>60 minute</h3>
                         <p class="price">380 RON</p>
                     </div>
-                    
+
                     <div class="duration-option" data-duration="90" data-price="550">
                         <h3>90 minute</h3>
                         <p class="price">550 RON</p>
                     </div>
                 </div>
-                
-              <form name="consultatie" method="POST" netlify class="booking-form" id="consultationForm">
-  <input type="hidden" name="form-name" value="consultatie" />
-  
-  <div class="form-row">
-    <div class="form-group">
-      <label for="nume">Nume*</label>
-      <input type="text" id="nume" name="nume" required>
-    </div>
-    
-    <div class="form-group">
-      <label for="prenume">Prenume*</label>
-      <input type="text" id="prenume" name="prenume" required>
-    </div>
-  </div>
 
-  <div class="form-group">
-    <label for="data_nasterii">Data nașterii*</label>
-    <input type="date" id="data_nasterii" name="data_nasterii" required>
-  </div>
-  
-  <div class="form-group">
-    <label for="tara">Țara*</label>
-    <select id="tara" name="tara" required>
-      <option value="">Selectează țara</option>
-      <option value="RO">România</option>
-      <option value="MD">Republica Moldova</option>
-      <option value="UK">Regatul Unit</option>
-      <option value="DE">Germania</option>
-      <option value="SI">Spania</option>
-      <option value="PT">Portugalia</option>
-      <option value="IT">Italia</option>
-      <option value="US">America</option>
-      <option value="OT">Altă țară</option>
-    </select>
-  </div>
+                <form name="consultatie" method="POST" data-netlify="true" class="booking-form" id="consultationForm">
+                    <input type="hidden" name="form-name" value="consultatie" />
 
-  <div class="form-row">
-    <div class="form-group">
-      <label for="telefon">Telefon*</label>
-      <input type="tel" id="telefon" name="telefon" required>
-    </div>
-    
-    <div class="form-group">
-      <label for="email">Email*</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-  </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nume">Nume*</label>
+                            <input type="text" id="nume" name="nume" required />
+                        </div>
 
-  <div class="form-group">
-    <label for="domeniu">Domeniul de drept*</label>
-    <select id="domeniu" name="domeniu" required>
-      <option value="">Selectează domeniul</option>
-      <option value="penal">Drept Penal</option>
-      <option value="civil">Drept Civil</option>
-      <option value="comercial">Drept Comercial</option>
-      <option value="contracte">Drept Contractual</option>
-      <option value="familie">Dreptul Familiei</option>
-      <option value="munca">Dreptul Muncii</option>
-      <option value="proprietate">Drept de Proprietate</option>
-    </select>
-  </div>
+                        <div class="form-group">
+                            <label for="prenume">Prenume*</label>
+                            <input type="text" id="prenume" name="prenume" required />
+                        </div>
+                    </div>
 
-  <div class="form-group">
-    <label for="mesaj">Detalii suplimentare (opțional)</label>
-    <textarea id="mesaj" name="mesaj" rows="4"></textarea>
-  </div>
-  
-  <button type="submit" class="submit-btn">Finalizează Programarea</button>
-</form>
+                    <div class="form-group">
+                        <label for="data_nasterii">Data nașterii*</label>
+                        <input type="date" id="data_nasterii" name="data_nasterii" required />
+                    </div>
 
+                    <div class="form-group">
+                        <label for="tara">Țara*</label>
+                        <select id="tara" name="tara" required>
+                            <option value="">Selectează țara</option>
+                            <option value="RO">România</option>
+                            <option value="MD">Republica Moldova</option>
+                            <option value="UK">Regatul Unit</option>
+                            <option value="DE">Germania</option>
+                            <option value="SI">Spania</option>
+                            <option value="PT">Portugalia</option>
+                            <option value="IT">Italia</option>
+                            <option value="US">America</option>
+                            <option value="OT">Altă țară</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefon">Telefon*</label>
+                            <input type="tel" id="telefon" name="telefon" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" name="email" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="domeniu">Domeniul de drept*</label>
+                        <select id="domeniu" name="domeniu" required>
+                            <option value="">Selectează domeniul</option>
+                            <option value="penal">Drept Penal</option>
+                            <option value="civil">Drept Civil</option>
+                            <option value="comercial">Drept Comercial</option>
+                            <option value="contracte">Drept Contractual</option>
+                            <option value="familie">Dreptul Familiei</option>
+                            <option value="munca">Dreptul Muncii</option>
+                            <option value="proprietate">Drept de Proprietate</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mesaj">Detalii suplimentare (opțional)</label>
+                        <textarea id="mesaj" name="mesaj" rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Finalizează Programarea</button>
+                </form>
             </div>
         </div>
     </section>
@@ -239,18 +237,21 @@
                 this.classList.add('selected');
             });
         });
-        
+
         // Script pentru formular
         document.getElementById('consultationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
+            // Nu prevenim trimiterea formularului pentru Netlify
             const selectedOption = document.querySelector('.duration-option.selected');
             const duration = selectedOption.dataset.duration;
             const price = selectedOption.dataset.price;
-            
-            alert(`Programare înregistrată!\nDurată: ${duration} minute\nPreț: ${price} RON`);
+
+            // Alert după trimiterea formularului (setTimeout să lase trimiterea să se întâmple)
+            setTimeout(() => {
+                alert(`Programare înregistrată!\nDurată: ${duration} minute\nPreț: ${price} RON`);
+            }, 100);
         });
     </script>
 </body>
 </html>
+
 
