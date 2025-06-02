@@ -1,1 +1,251 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programare Consultație | Cabinet Avocat Alice Strecheanu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Stiluri existente (păstrate identice) */
+        
+        /* ADAUGĂ ACESTE STILURI NOI */
+        .booking-page {
+            padding: 80px 0;
+            background-color: #F5F0E5;
+        }
+        
+        .booking-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+        
+        .booking-title {
+            font-family: 'Cinzel Decorative', serif;
+            color: #3E2723;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+            border-bottom: 2px solid #8D6E63;
+            padding-bottom: 15px;
+        }
+        
+        .duration-options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        
+        .duration-option {
+            flex: 0 0 30%;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #D7CCC8;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .duration-option:hover, .duration-option.selected {
+            border-color: #8D6E63;
+            background: #EFEBE9;
+        }
+        
+        .duration-option h3 {
+            font-family: 'Cormorant Garamond', serif;
+            color: #3E2723;
+            margin-bottom: 10px;
+        }
+        
+        .duration-option .price {
+            font-weight: 600;
+            color: #5D4037;
+            font-size: 1.2rem;
+        }
+        
+        .booking-form {
+            margin-top: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #3E2723;
+        }
+        
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #D7CCC8;
+            border-radius: 4px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+        }
+        
+        .submit-btn {
+            background-color: #8D6E63;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background-color: #6D4C41;
+        }
+        
+        @media (max-width: 768px) {
+            .duration-options {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <section class="booking-page">
+        <div class="container">
+            <div class="booking-container">
+                <h2 class="booking-title">Programează Consultația</h2>
+                
+                <div class="duration-options">
+                    <div class="duration-option selected" data-duration="30" data-price="100">
+                        <h3>30 minute</h3>
+                        <p class="price">100 RON</p>
+                    </div>
+                    
+                    <div class="duration-option" data-duration="60" data-price="180">
+                        <h3>60 minute</h3>
+                        <p class="price">180 RON</p>
+                    </div>
+                    
+                    <div class="duration-option" data-duration="90" data-price="250">
+                        <h3>90 minute</h3>
+                        <p class="price">250 RON</p>
+                    </div>
+                </div>
+                
+                <form class="booking-form" id="consultationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nume">Nume*</label>
+                            <input type="text" id="nume" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="prenume">Prenume*</label>
+                            <input type="text" id="prenume" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="data_nasterii">Data nașterii*</label>
+                        <input type="date" id="data_nasterii" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tara">Țara*</label>
+                        <select id="tara" required>
+                            <option value="">Selectează țara</option>
+                            <option value="RO">România</option>
+                            <option value="MD">Republica Moldova</option>
+                            <option value="UK">Regatul Unit</option>
+                            <option value="DE">Germania</option>
+                            <option value="OT">Altă țară</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telefon">Telefon*</label>
+                            <input type="tel" id="telefon" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="domeniu">Domeniul de drept*</label>
+                        <select id="domeniu" required>
+                            <option value="">Selectează domeniul</option>
+                            <option value="penal">Drept Penal</option>
+                            <option value="civil">Drept Civil</option>
+                            <option value="comercial">Drept Comercial</option>
+                            <option value="contracte">Drept Contractual</option>
+                            <option value="familie">Dreptul Familiei</option>
+                            <option value="munca">Dreptul Muncii</option>
+                            <option value="proprietate">Drept de Proprietate</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mesaj">Detalii suplimentare (opțional)</label>
+                        <textarea id="mesaj" rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Finalizează Programarea</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
+    <script>
+        // Script pentru selectarea duratei
+        document.querySelectorAll('.duration-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.duration-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                this.classList.add('selected');
+            });
+        });
+        
+        // Script pentru formular
+        document.getElementById('consultationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const selectedOption = document.querySelector('.duration-option.selected');
+            const duration = selectedOption.dataset.duration;
+            const price = selectedOption.dataset.price;
+            
+            // Aici poți adăuga logica pentru trimiterea datelor
+            alert(`Programare înregistrată!\nDurată: ${duration} minute\nPreț: ${price} RON`);
+            // this.submit(); // Decomentează pentru trimitere reală
+        });
+    </script>
+</body>
+</html>
