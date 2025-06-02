@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LegalEdge Law | Online Consultations</title>
+    <title>Chambers & Partners | Virtual Legal Consultations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Georgia', serif;
         }
         
         body {
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
+            line-height: 1.8;
+            color: #3E2723;
+            background-color: #F5F0E5;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 500;
         }
         
         .container {
@@ -27,10 +31,12 @@
         
         /* Header Styles */
         header {
-            background: linear-gradient(135deg, #1a3a6e, #0d2342);
-            color: white;
-            padding: 80px 0;
+            background: linear-gradient(rgba(62, 39, 35, 0.9), rgba(62, 39, 35, 0.95)), 
+                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: #F5F0E5;
+            padding: 100px 0;
             text-align: center;
+            border-bottom: 8px solid #8D6E63;
         }
         
         .header-content {
@@ -39,100 +45,143 @@
         }
         
         h1 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 3.2rem;
+            margin-bottom: 25px;
             font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
         
         .tagline {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            font-style: italic;
         }
         
         /* Button Styles */
         .cta-button {
             display: inline-block;
-            background-color: #e8b339;
-            color: #1a3a6e;
-            padding: 15px 30px;
-            font-size: 1.1rem;
+            background-color: #8D6E63;
+            color: #F5F0E5;
+            padding: 18px 35px;
+            font-size: 1.2rem;
             font-weight: 600;
             text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            border: none;
+            border-radius: 0;
+            transition: all 0.4s ease;
+            border: 2px solid #D7CCC8;
             cursor: pointer;
+            letter-spacing: 1px;
+            font-family: 'Cormorant Garamond', serif;
+            text-transform: uppercase;
         }
         
         .cta-button:hover {
-            background-color: #f5c862;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: #6D4C41;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
         
         /* Features Section */
         .features {
-            padding: 60px 0;
+            padding: 80px 0;
             text-align: center;
+            background-color: #F5F0E5;
         }
         
         .features h2 {
-            color: #1a3a6e;
-            margin-bottom: 40px;
-            font-size: 2rem;
+            color: #3E2723;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            font-family: 'Cinzel Decorative', serif;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .features h2:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 2px;
+            background: #8D6E63;
+            bottom: -15px;
+            left: 25%;
         }
         
         .feature-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
+            margin-top: 50px;
         }
         
         .feature-item {
             flex: 1 1 300px;
             max-width: 350px;
-            padding: 30px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 40px 30px;
+            background: #EFEBE9;
+            border-radius: 2px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border-top: 4px solid #8D6E63;
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-10px);
         }
         
         .feature-item i {
-            font-size: 2.5rem;
-            color: #e8b339;
-            margin-bottom: 20px;
+            font-size: 2.8rem;
+            color: #5D4037;
+            margin-bottom: 25px;
             display: block;
         }
         
         .feature-item h3 {
-            color: #1a3a6e;
-            margin-bottom: 15px;
+            color: #3E2723;
+            margin-bottom: 20px;
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.5rem;
+        }
+        
+        .feature-item p {
+            font-size: 1.1rem;
         }
         
         /* Footer */
         footer {
-            background-color: #1a3a6e;
-            color: white;
+            background-color: #3E2723;
+            color: #D7CCC8;
             text-align: center;
-            padding: 20px 0;
-            font-size: 0.9rem;
+            padding: 30px 0;
+            font-size: 0.95rem;
+            border-top: 1px solid #8D6E63;
+        }
+        
+        footer p {
+            letter-spacing: 0.5px;
         }
         
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2.2rem;
+                font-size: 2.4rem;
             }
             
             .tagline {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
             
             .cta-button {
-                padding: 12px 25px;
+                padding: 15px 25px;
                 font-size: 1rem;
+            }
+            
+            .features h2 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -143,33 +192,33 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <h1>Expert Legal Consultation From Anywhere</h1>
-                <p class="tagline">Secure, confidential video consultations with experienced attorneys via Zoom or Microsoft Teams.</p>
-                <a href="#consultation" class="cta-button">Schedule Your Consultation</a>
+                <h1>Esquire Consultations</h1>
+                <p class="tagline">Premier legal counsel through secure digital chambers</p>
+                <a href="#consultation" class="cta-button">Request Counsel</a>
             </div>
         </div>
     </header>
     
     <section class="features">
         <div class="container">
-            <h2>Why Choose Online Legal Consultation?</h2>
+            <h2>Our Distinguished Service</h2>
             <div class="feature-grid">
                 <div class="feature-item">
-                    <i class="fas fa-laptop"></i>
-                    <h3>Convenient & Secure</h3>
-                    <p>Meet with your attorney from the comfort of your home or office through encrypted video platforms.</p>
+                    <i class="fas fa-gavel"></i>
+                    <h3>Venerable Expertise</h3>
+                    <p>Centuries of combined legal experience available through modern video conferencing platforms.</p>
                 </div>
                 
                 <div class="feature-item">
-                    <i class="fas fa-clock"></i>
-                    <h3>Flexible Scheduling</h3>
-                    <p>Book appointments at times that work for you, including evenings and weekends.</p>
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Discreet Proceedings</h3>
+                    <p>Attorney-client privilege maintained with encrypted Zoom and Teams connections.</p>
                 </div>
                 
                 <div class="feature-item">
-                    <i class="fas fa-file-contract"></i>
-                    <h3>Same Quality Service</h3>
-                    <p>Receive the same expert legal advice as in-person consultations at competitive rates.</p>
+                    <i class="fas fa-hourglass-half"></i>
+                    <h3>Timely Counsel</h3>
+                    <p>Secure appointments within 24 hours for urgent matters, without compromising quality.</p>
                 </div>
             </div>
         </div>
@@ -177,7 +226,7 @@
     
     <footer>
         <div class="container">
-            <p>&copy; 2023 LegalEdge Law Firm. All rights reserved.</p>
+            <p>© 2023 Chambers & Partners LLP. All rights reserved.</p>
         </div>
     </footer>
 </body>
