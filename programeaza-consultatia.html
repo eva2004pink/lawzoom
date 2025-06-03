@@ -294,7 +294,7 @@
 }
 
 </style>
-   <script>
+  <script>
     // Script pentru selectarea duratei
     document.querySelectorAll('.duration-option').forEach(option => {
         option.addEventListener('click', function () {
@@ -305,40 +305,55 @@
         });
     });
 
-    // Script pentru formular
+    // Script pentru trimiterea formularului către Netlify și afișarea mesajului de succes
     document.getElementById('consultationForm').addEventListener('submit', function (e) {
         e.preventDefault();
 
+        const form = e.target;
+        const formData = new FormData(form);
+
+        // Adaugăm și durata și prețul în formData
         const selectedOption = document.querySelector('.duration-option.selected');
         const duration = selectedOption.dataset.duration;
         const price = selectedOption.dataset.price;
 
-        // Ascunde formularul
-        document.querySelector('.booking-container').style.display = 'none';
+        formData.append('durata', duration);
+        formData.append('pret', price);
 
-        // Creează mesajul de succes
-        const successMessage = `
-            <div class="success-message">
-                <h2><i class="fas fa-check-circle"></i> Mulțumim pentru programare!</h2>
-                <p>Formularul a fost trimis cu succes.</p>
-                <div class="confirmation-details">
-                    <p><strong>Avocatul Alice Strecheanu vă va contacta în maxim 24 de ore:</strong></p>
-                    <ul>
-                        <li><i class="fab fa-whatsapp"></i> <strong>Prin WhatsApp</strong> (la numărul furnizat)</li>
-                        <li><i class="fas fa-envelope"></i> <strong>Prin email</strong> (dacă nu răspundeți pe WhatsApp în 2 ore)</li>
-                    </ul>
-                    <p>Pentru a stabili data și ora exactă a consultației.</p>
-                    <p><strong>Durată selectată:</strong> ${duration} minute &nbsp;&nbsp; <strong>Preț:</strong> ${price} RON</p>
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString()
+        })
+        .then(() => {
+            // Ascunde formularul
+            document.querySelector('.booking-container').style.display = 'none';
+
+            // Creează mesajul de succes
+            const successMessage = `
+                <div class="success-message">
+                    <h2><i class="fas fa-check-circle"></i> Mulțumim pentru programare!</h2>
+                    <p>Formularul a fost trimis cu succes.</p>
+                    <div class="confirmation-details">
+                        <p><strong>Avocatul Alice Strecheanu vă va contacta în maxim 24 de ore:</strong></p>
+                        <ul>
+                            <li><i class="fab fa-whatsapp"></i> <strong>Prin WhatsApp</strong> (la numărul furnizat)</li>
+                            <li><i class="fas fa-envelope"></i> <strong>Prin email</strong> (dacă nu răspundeți pe WhatsApp în 2 ore)</li>
+                        </ul>
+                        <p>Pentru a stabili data și ora exactă a consultației.</p>
+                        <p><strong>Durată selectată:</strong> ${duration} minute &nbsp;&nbsp; <strong>Preț:</strong> ${price} RON</p>
+                    </div>
+                    <a href="index.html" class="cta-button">Înapoi la pagina principală</a>
                 </div>
-                <a href="index.html" class="cta-button">Înapoi la pagina principală</a>
-            </div>
-        `;
-
-        // Afișează mesajul
-        document.querySelector('.booking-page').innerHTML += successMessage;
+            `;
+            document.querySelector('.booking-page').innerHTML += successMessage;
+        })
+        .catch((error) => {
+            alert("A apărut o eroare la trimiterea formularului. Încercați din nou.");
+            console.error("Form submission error:", error);
+        });
     });
 </script>
-
 </body>
 </html>
 
