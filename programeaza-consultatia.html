@@ -227,30 +227,51 @@
         </div>
     </section>
 
-    <script>
-        // Script pentru selectarea duratei
-        document.querySelectorAll('.duration-option').forEach(option => {
-            option.addEventListener('click', function() {
-                document.querySelectorAll('.duration-option').forEach(opt => {
-                    opt.classList.remove('selected');
-                });
-                this.classList.add('selected');
+   <script>
+    // Script pentru selectarea duratei
+    document.querySelectorAll('.duration-option').forEach(option => {
+        option.addEventListener('click', function () {
+            document.querySelectorAll('.duration-option').forEach(opt => {
+                opt.classList.remove('selected');
             });
+            this.classList.add('selected');
         });
+    });
 
-        // Script pentru formular
-        document.getElementById('consultationForm').addEventListener('submit', function(e) {
-            // Nu prevenim trimiterea formularului pentru Netlify
-            const selectedOption = document.querySelector('.duration-option.selected');
-            const duration = selectedOption.dataset.duration;
-            const price = selectedOption.dataset.price;
+    // Script pentru formular
+    document.getElementById('consultationForm').addEventListener('submit', function (e) {
+        e.preventDefault();
 
-            // Alert după trimiterea formularului (setTimeout să lase trimiterea să se întâmple)
-            setTimeout(() => {
-                alert(`Programare înregistrată!\nDurată: ${duration} minute\nPreț: ${price} RON`);
-            }, 100);
-        });
-    </script>
+        const selectedOption = document.querySelector('.duration-option.selected');
+        const duration = selectedOption.dataset.duration;
+        const price = selectedOption.dataset.price;
+
+        // Ascunde formularul
+        document.querySelector('.booking-container').style.display = 'none';
+
+        // Creează mesajul de succes
+        const successMessage = `
+            <div class="success-message">
+                <h2><i class="fas fa-check-circle"></i> Mulțumim pentru programare!</h2>
+                <p>Formularul a fost trimis cu succes.</p>
+                <div class="confirmation-details">
+                    <p><strong>Avocatul Alice Strecheanu vă va contacta în maxim 24 de ore:</strong></p>
+                    <ul>
+                        <li><i class="fab fa-whatsapp"></i> <strong>Prin WhatsApp</strong> (la numărul furnizat)</li>
+                        <li><i class="fas fa-envelope"></i> <strong>Prin email</strong> (dacă nu răspundeți pe WhatsApp în 2 ore)</li>
+                    </ul>
+                    <p>Pentru a stabili data și ora exactă a consultației.</p>
+                    <p><strong>Durată selectată:</strong> ${duration} minute &nbsp;&nbsp; <strong>Preț:</strong> ${price} RON</p>
+                </div>
+                <a href="index.html" class="cta-button">Înapoi la pagina principală</a>
+            </div>
+        `;
+
+        // Afișează mesajul
+        document.querySelector('.booking-page').innerHTML += successMessage;
+    });
+</script>
+
 </body>
 </html>
 
