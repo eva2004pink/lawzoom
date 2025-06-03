@@ -226,7 +226,74 @@
             </div>
         </div>
     </section>
+<style>
+    .success-message {
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 4px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
 
+.success-message h2 {
+    color: #4CAF50;
+    font-family: 'Cinzel Decorative', serif;
+    margin-bottom: 20px;
+}
+
+.success-message i.fa-check-circle {
+    color: #4CAF50;
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.confirmation-details {
+    background: #F5F0E5;
+    padding: 20px;
+    border-left: 4px solid #8D6E63;
+    margin: 25px 0;
+    text-align: left;
+}
+
+.confirmation-details ul {
+    list-style: none;
+    margin: 15px 0;
+    padding: 0;
+}
+
+.confirmation-details li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.confirmation-details i {
+    color: #5D4037;
+    font-size: 1.2rem;
+    min-width: 25px;
+}
+
+.success-message .cta-button {
+    margin-top: 30px;
+    display: inline-block;
+    background-color: #8D6E63;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.success-message .cta-button:hover {
+    background-color: #6D4C41;
+}
+
+</style>
    <script>
     // Script pentru selectarea duratei
     document.querySelectorAll('.duration-option').forEach(option => {
