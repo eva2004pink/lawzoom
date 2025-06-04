@@ -1,16 +1,80 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <title>Mulțumim!</title>
-    <link rel="stylesheet" href="stilul-tău.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mulțumim pentru programare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #F5F0E5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .success-message {
+            text-align: center;
+            background: white;
+            padding: 60px 30px;
+            border-radius: 6px;
+            max-width: 800px;
+            margin: 80px auto;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+
+        .success-message h2 {
+            color: #4CAF50;
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .success-message i.fa-check-circle {
+            color: #4CAF50;
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .success-message p {
+            color: #3E2723;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 30px;
+            background-color: #8D6E63;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #6D4C41;
+        }
+    </style>
 </head>
 <body>
+
     <div class="success-message">
         <i class="fas fa-check-circle"></i>
         <h2>Mulțumim pentru programare!</h2>
-        <p>Ai finalizat cu succes programarea. Vei fi contactat în cel mai scurt timp.</p>
+        <p>Avocatul a fost notificat și veți fi contactat în curând prin WhatsApp.</p>
+        <p>Dacă nu răspundeți în decurs de 2 ore, veți primi un email pentru a stabili ziua și ora consultației.</p>
+        <p>Se va folosi adresa de email și numărul de telefon completate în formular.</p>
+        <p>Factura și confirmarea plății au fost trimise pe email în format PDF.</p>
+        <p>Pentru orice nelămuriri, ne puteți contacta telefonic la <strong>0743 397 209</strong>.</p>
         <a href="/" class="cta-button">Înapoi la pagina principală</a>
     </div>
+
 </body>
 </html>
