@@ -7,7 +7,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     body {
@@ -15,15 +15,23 @@
       background-color: #F5F0E5;
       font-family: 'Cormorant Garamond', serif;
       color: #3E2723;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
+      font-weight: 600;
       line-height: 1.7;
       padding: 60px 20px;
+
+      /* Fundal cu simbolul balanței */
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1a/Scale_of_justice.svg');
+      background-repeat: repeat;
+      background-size: 100px;
+      background-attachment: fixed;
+      opacity: 0.95;
     }
 
     .container {
       max-width: 900px;
       margin: 0 auto;
-      background: white;
+      background: rgba(255, 255, 255, 0.96);
       padding: 40px;
       border-radius: 4px;
       box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
@@ -31,15 +39,18 @@
 
     h1 {
       font-family: 'Cinzel Decorative', serif;
-      font-size: 2.2rem;
+      font-size: 2.4rem;
       text-align: center;
       margin-bottom: 30px;
       border-bottom: 2px solid #8D6E63;
       padding-bottom: 15px;
+      font-weight: 700;
     }
 
     p {
       margin-bottom: 20px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
     }
 
     .cta-button {
@@ -68,6 +79,7 @@
 <body>
   <div class="container">
     <h1>Cum funcționează conceptul</h1>
+
     <p>Platforma noastră facilitează accesul rapid și sigur la servicii juridice. Totul începe cu completarea formularului de programare, unde alegi durata consultanței și introduci datele tale.</p>
     
     <p>După completare, vei fi direcționat automat către o pagină securizată Stripe pentru plată. După confirmarea plății, avocatul este notificat, iar tu primești un e-mail cu factura fiscală în format PDF.</p>
