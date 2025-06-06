@@ -20,18 +20,17 @@
       line-height: 1.7;
       padding: 60px 20px;
 
-      /* Fundal cu simbolul balanței */
-      background-image: url('https://upload.wikimedia.org/wikipedia/commons/1/1a/Scale_of_justice.svg');
-      background-repeat: repeat;
-      background-size: 100px;
+      background-image: url('https://cdn.pixabay.com/photo/2016/03/31/20/09/law-1296358_1280.png');
+      background-repeat: no-repeat;
+      background-position: bottom right;
+      background-size: 250px;
       background-attachment: fixed;
-      opacity: 0.95;
     }
 
     .container {
       max-width: 900px;
       margin: 0 auto;
-      background: rgba(255, 255, 255, 0.96);
+      background: rgba(255, 255, 255, 0.95);
       padding: 40px;
       border-radius: 4px;
       box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
@@ -47,10 +46,13 @@
       font-weight: 700;
     }
 
-    p {
-      margin-bottom: 20px;
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 15px;
       font-weight: 600;
-      letter-spacing: 0.3px;
     }
 
     .cta-button {
@@ -73,6 +75,9 @@
       .container {
         padding: 25px 20px;
       }
+      body {
+        background-size: 120px;
+      }
     }
   </style>
 </head>
@@ -80,15 +85,16 @@
   <div class="container">
     <h1>Cum funcționează conceptul</h1>
 
-    <p>Platforma noastră facilitează accesul rapid și sigur la servicii juridice. Totul începe cu completarea formularului de programare, unde alegi durata consultanței și introduci datele tale.</p>
-    
-    <p>După completare, vei fi direcționat automat către o pagină securizată Stripe pentru plată. După confirmarea plății, avocatul este notificat, iar tu primești un e-mail cu factura fiscală în format PDF.</p>
-
-    <p>În maxim 2 ore vei fi contactat pe WhatsApp. Dacă nu răspunzi, te vom contacta prin e-mail pentru a stabili ziua și ora consultației.</p>
-
-    <p>Serviciul nostru este gândit pentru a reduce birocrația și pentru a oferi soluții rapide: fie online (video/telefon), fie la sediu.</p>
-
-    <p>Pentru întrebări, ne poți contacta la <strong>0743 397 209</strong>.</p>
+    <ul>
+      <li>Completezi formularul de programare și alegi durata consultației (30, 60 sau 90 minute).</li>
+      <li>După completare, ești direcționat către o pagină Stripe pentru plată securizată.</li>
+      <li>Plata se procesează imediat, iar avocatul este notificat automat.</li>
+      <li>Primești un email cu factura fiscală (PDF) pe adresa introdusă în formular.</li>
+      <li>În cel mult 2 ore ești contactat pe WhatsApp pentru a stabili data și ora consultației.</li>
+      <li>Dacă nu răspunzi pe WhatsApp, vei fi contactat prin email.</li>
+      <li>Consultația poate avea loc online (videocall, telefon) sau fizic, în funcție de preferință.</li>
+      <li>Pentru nelămuriri sau întrebări, ne poți suna la <strong>0743 397 209</strong>.</li>
+    </ul>
 
     <a href="/" class="cta-button">Înapoi la pagina principală</a>
   </div>
