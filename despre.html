@@ -4,45 +4,87 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Despre Concept | Cabinet Avocat Alice Strecheanu</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet" />
+
   <style>
     body {
+      margin: 0;
       font-family: 'Cormorant Garamond', serif;
-      background-color: #F5F0E5;
+      font-size: 1.3rem;
+      line-height: 1.8;
+      background: linear-gradient(#f9f5ef, #f3eee5);
       color: #3E2723;
-      padding: 40px;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: auto;
+      padding: 40px 20px;
     }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      padding: 50px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
     h1 {
-      font-size: 2rem;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 2.8rem;
+      color: #5D4037;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    p {
       margin-bottom: 20px;
     }
-    a {
-      color: #8D6E63;
+
+    .cta-button {
+      display: inline-block;
+      margin-top: 30px;
+      background-color: #8D6E63;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 5px;
       text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s ease;
     }
-    a:hover {
-      text-decoration: underline;
+
+    .cta-button:hover {
+      background-color: #6D4C41;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 20px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Despre conceptul de consultanță online</h1>
-  <p>
-    Platforma noastră simplifică accesul la consultanță juridică:
-  </p>
-  <ul>
-    <li>Completezi formularul cu datele tale</li>
-    <li>Plătești online consultanța (30, 60 sau 90 de minute)</li>
-    <li>Avocatul este notificat imediat</li>
-    <li>În maxim 2 ore ești contactat pe WhatsApp sau email</li>
-    <li>Stabiliți împreună ziua și ora consultanței</li>
-    <li>Primesti confirmare și factură pe email</li>
-  </ul>
-  <p>Totul este digital, simplu și rapid.</p>
+  <div class="container">
+    <h1>Despre concept</h1>
+    <p>
+      Platforma noastră oferă un mod rapid, profesionist și sigur de a accesa servicii juridice direct din confortul casei tale. Totul începe cu completarea unui formular simplu, în care alegi durata consultanței, introduci datele tale și specifici domeniul juridic de interes.
+    </p>
+    <p>
+      După completarea formularului, ești direcționat automat către o pagină securizată de plată Stripe. Odată ce tranzacția este confirmată, avocatul este notificat imediat, iar tu primești un e-mail cu dovada plății (factura fiscală PDF).
+    </p>
+    <p>
+      În cel mult 2 ore, vei fi contactat prin WhatsApp sau e-mail pentru a stabili ziua și ora exactă a consultanței. În cazul în care nu răspunzi pe WhatsApp, ne vom asigura că mesajul ajunge prin e-mail.
+    </p>
+    <p>
+      Conceptul este gândit pentru a reduce birocrația și timpul pierdut. Consultanțele au loc fie online (telefon/video), fie la sediu, în funcție de disponibilitate.
+    </p>
 
-  <p><a href="/">← Înapoi la pagina principală</a></p>
+    <p>
+      Pentru orice întrebări, ne poți contacta la <strong>0743 397 209</strong>.
+    </p>
+
+    <a href="/" class="cta-button">Înapoi la pagina principală</a>
+  </div>
 </body>
 </html>
