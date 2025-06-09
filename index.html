@@ -4,17 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cabinet Avocat Alice Strecheanu | Consultanță Juridică Online</title>
-  
-  <!-- Fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome pentru pictograme -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  
+
   <style>
-    /* Stiluri globale */
     * {
       margin: 0;
       padding: 0;
@@ -35,10 +31,9 @@
       padding: 0 20px;
     }
 
-    /* Antet */
     header {
-      background: linear-gradient(rgba(62, 39, 35, 0.9), rgba(62, 39, 35, 0.95)),
-      url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      background: linear-gradient(rgba(62, 39, 35, 0.9), rgba(62, 39, 35, 0.95)), 
+                  url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
       color: #F5F0E5;
       padding: 100px 0;
       text-align: center;
@@ -66,7 +61,6 @@
       font-style: italic;
     }
 
-    /* Butoane */
     .cta-button {
       display: inline-block;
       background-color: #8D6E63;
@@ -90,50 +84,8 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
 
-    /* Calendar / Program */
-    .schedule {
-      padding: 60px 0;
-      background-color: #EFEBE9;
-      text-align: center;
-    }
-
-    .schedule h2 {
-      font-size: 2.2rem;
-      color: #3E2723;
-      margin-bottom: 30px;
-      font-family: 'Cinzel Decorative', serif;
-    }
-
-    .calendar-table {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      border-collapse: collapse;
-      background-color: #F5F0E5;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    }
-
-    .calendar-table th,
-    .calendar-table td {
-      padding: 18px;
-      border: 1px solid #D7CCC8;
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #5D4037;
-      font-family: 'Cormorant Garamond', serif;
-    }
-
-    .timezone-note {
-      margin-top: 15px;
-      font-size: 1rem;
-      color: #5D4037;
-      font-style: italic;
-      opacity: 0.85;
-    }
-
-    /* Servicii */
     .features {
-      padding: 80px 0;
+      padding: 80px 0 40px;
       text-align: center;
       background-color: #F5F0E5;
     }
@@ -198,7 +150,46 @@
       font-size: 1.1rem;
     }
 
-    /* Subsol */
+    .schedule {
+      padding: 60px 0;
+      background-color: #EFEBE9;
+      text-align: center;
+    }
+
+    .schedule h2 {
+      font-size: 2.2rem;
+      color: #3E2723;
+      margin-bottom: 30px;
+      font-family: 'Cinzel Decorative', serif;
+    }
+
+    .calendar-table {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background-color: #F5F0E5;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .calendar-table th,
+    .calendar-table td {
+      padding: 18px;
+      border: 1px solid #D7CCC8;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #5D4037;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .timezone-note {
+      margin-top: 15px;
+      font-size: 1rem;
+      color: #5D4037;
+      font-style: italic;
+      opacity: 0.85;
+    }
+
     footer {
       background-color: #3E2723;
       color: #D7CCC8;
@@ -212,7 +203,6 @@
       letter-spacing: 0.5px;
     }
 
-    /* Responsive */
     @media (max-width: 768px) {
       h1 {
         font-size: 2.4rem;
@@ -246,9 +236,32 @@
     </div>
   </header>
 
+  <section class="features">
+    <div class="container">
+      <h2>Serviciile Noastre</h2>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <i class="fas fa-gavel"></i>
+          <h3>Expertiză de Excepție</h3>
+          <p>Peste 20 de ani de experiență în practica juridică, disponibilă prin platforme de conferințe video.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Confidențialitate Absolută</h3>
+          <p>Secretul profesional asigurat prin conexiuni criptate pe Zoom și Microsoft Teams.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-hourglass-half"></i>
+          <h3>Răspuns Rapid</h3>
+          <p>Programări în maximum 24 de ore pentru situații urgente, fără compromisuri calitative.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="schedule">
     <div class="container">
-      <h2>Program</h2>
+      <h2>Program Consultanțe</h2>
       <table class="calendar-table">
         <thead>
           <tr>
@@ -270,29 +283,6 @@
         </tbody>
       </table>
       <p class="timezone-note">🕒 Toate orele afișate sunt în fusul orar România (GMT+3).</p>
-    </div>
-  </section>
-
-  <section class="features">
-    <div class="container">
-      <h2>Serviciile Noastre</h2>
-      <div class="feature-grid">
-        <div class="feature-item">
-          <i class="fas fa-gavel"></i>
-          <h3>Expertiză de Excepție</h3>
-          <p>Peste 20 de ani de experiență în practica juridică, disponibilă prin platforme de conferințe video.</p>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-shield-alt"></i>
-          <h3>Confidențialitate Absolută</h3>
-          <p>Secretul profesional asigurat prin conexiuni criptate pe Zoom și Microsoft Teams.</p>
-        </div>
-        <div class="feature-item">
-          <i class="fas fa-hourglass-half"></i>
-          <h3>Răspuns Rapid</h3>
-          <p>Programări în maximum 24 de ore pentru situații urgente, fără compromisuri calitative.</p>
-        </div>
-      </div>
     </div>
   </section>
 
