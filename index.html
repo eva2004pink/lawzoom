@@ -1,298 +1,305 @@
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabinet Avocat Alice Strecheanu | Consultanță Juridică Online</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cabinet Avocat Alice Strecheanu | Consultanță Juridică Online</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome pentru pictograme -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    /* Stiluri globale */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      line-height: 1.8;
+      color: #3E2723;
+      background-color: #F5F0E5;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Antet */
+    header {
+      background: linear-gradient(rgba(62, 39, 35, 0.9), rgba(62, 39, 35, 0.95)),
+      url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+      color: #F5F0E5;
+      padding: 100px 0;
+      text-align: center;
+      border-bottom: 8px solid #8D6E63;
+    }
+
+    .header-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 3.2rem;
+      margin-bottom: 25px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      opacity: 0.95;
+      font-style: italic;
+    }
+
+    /* Butoane */
+    .cta-button {
+      display: inline-block;
+      background-color: #8D6E63;
+      color: #F5F0E5;
+      padding: 18px 35px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 0;
+      transition: all 0.4s ease;
+      border: 2px solid #D7CCC8;
+      cursor: pointer;
+      letter-spacing: 1px;
+      font-family: 'Cormorant Garamond', serif;
+      text-transform: uppercase;
+    }
+
+    .cta-button:hover {
+      background-color: #6D4C41;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Calendar / Program */
     .schedule {
-    padding: 60px 0;
-    background-color: #EFEBE9;
-    text-align: center;
-}
+      padding: 60px 0;
+      background-color: #EFEBE9;
+      text-align: center;
+    }
 
-.schedule h2 {
-    font-size: 2.2rem;
-    color: #3E2723;
-    margin-bottom: 30px;
-    font-family: 'Cinzel Decorative', serif;
-}
+    .schedule h2 {
+      font-size: 2.2rem;
+      color: #3E2723;
+      margin-bottom: 30px;
+      font-family: 'Cinzel Decorative', serif;
+    }
 
-.calendar-table {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    border-collapse: collapse;
-    background-color: #F5F0E5;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
+    .calendar-table {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      background-color: #F5F0E5;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
 
-.calendar-table th,
-.calendar-table td {
-    padding: 18px;
-    border: 1px solid #D7CCC8;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #5D4037;
-    font-family: 'Cormorant Garamond', serif;
-}
-.timezone-note {
-    margin-top: 15px;
-    font-size: 1rem;
-    color: #5D4037;
-    font-style: italic;
-    opacity: 0.85;
-}
+    .calendar-table th,
+    .calendar-table td {
+      padding: 18px;
+      border: 1px solid #D7CCC8;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #5D4037;
+      font-family: 'Cormorant Garamond', serif;
+    }
 
-    <style>
-        /* Stiluri globale */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            line-height: 1.8;
-            color: #3E2723;
-            background-color: #F5F0E5;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 500;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Stiluri antet */
-        header {
-            background: linear-gradient(rgba(62, 39, 35, 0.9), rgba(62, 39, 35, 0.95)), 
-                        url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
-            color: #F5F0E5;
-            padding: 100px 0;
-            text-align: center;
-            border-bottom: 8px solid #8D6E63;
-        }
-        
-        .header-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        h1 {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 3.2rem;
-            margin-bottom: 25px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        .tagline {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-            opacity: 0.95;
-            font-style: italic;
-        }
-        
-        /* Stiluri buton */
-        .cta-button {
-            display: inline-block;
-            background-color: #8D6E63;
-            color: #F5F0E5;
-            padding: 18px 35px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 0;
-            transition: all 0.4s ease;
-            border: 2px solid #D7CCC8;
-            cursor: pointer;
-            letter-spacing: 1px;
-            font-family: 'Cormorant Garamond', serif;
-            text-transform: uppercase;
-        }
-        
-        .cta-button:hover {
-            background-color: #6D4C41;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
-        
-        /* Secțiune servicii */
-        .features {
-            padding: 80px 0;
-            text-align: center;
-            background-color: #F5F0E5;
-        }
-        
-        .features h2 {
-            color: #3E2723;
-            margin-bottom: 50px;
-            font-size: 2.5rem;
-            font-family: 'Cinzel Decorative', serif;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .features h2:after {
-            content: '';
-            position: absolute;
-            width: 50%;
-            height: 2px;
-            background: #8D6E63;
-            bottom: -15px;
-            left: 25%;
-        }
-        
-        .feature-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            margin-top: 50px;
-        }
-        
-        .feature-item {
-            flex: 1 1 300px;
-            max-width: 350px;
-            padding: 40px 30px;
-            background: #EFEBE9;
-            border-radius: 2px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            border-top: 4px solid #8D6E63;
-            transition: transform 0.3s ease;
-        }
-        
-        .feature-item:hover {
-            transform: translateY(-10px);
-        }
-        
-        .feature-item i {
-            font-size: 2.8rem;
-            color: #5D4037;
-            margin-bottom: 25px;
-            display: block;
-        }
-        
-        .feature-item h3 {
-            color: #3E2723;
-            margin-bottom: 20px;
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 1.5rem;
-        }
-        
-        .feature-item p {
-            font-size: 1.1rem;
-        }
-        
-        /* Subsol */
-        footer {
-            background-color: #3E2723;
-            color: #D7CCC8;
-            text-align: center;
-            padding: 30px 0;
-            font-size: 0.95rem;
-            border-top: 1px solid #8D6E63;
-        }
-        
-        footer p {
-            letter-spacing: 0.5px;
-        }
-        
-        /* Adaptare responsive */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.4rem;
-            }
-            
-            .tagline {
-                font-size: 1.2rem;
-            }
-            
-            .cta-button {
-                padding: 15px 25px;
-                font-size: 1rem;
-            }
-            
-            .features h2 {
-                font-size: 2rem;
-            }
-        }
-    </style>
-    <!-- Font Awesome pentru pictograme -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    .timezone-note {
+      margin-top: 15px;
+      font-size: 1rem;
+      color: #5D4037;
+      font-style: italic;
+      opacity: 0.85;
+    }
+
+    /* Servicii */
+    .features {
+      padding: 80px 0;
+      text-align: center;
+      background-color: #F5F0E5;
+    }
+
+    .features h2 {
+      color: #3E2723;
+      margin-bottom: 50px;
+      font-size: 2.5rem;
+      font-family: 'Cinzel Decorative', serif;
+      position: relative;
+      display: inline-block;
+    }
+
+    .features h2:after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 2px;
+      background: #8D6E63;
+      bottom: -15px;
+      left: 25%;
+    }
+
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 50px;
+    }
+
+    .feature-item {
+      flex: 1 1 300px;
+      max-width: 350px;
+      padding: 40px 30px;
+      background: #EFEBE9;
+      border-radius: 2px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      border-top: 4px solid #8D6E63;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-item:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-item i {
+      font-size: 2.8rem;
+      color: #5D4037;
+      margin-bottom: 25px;
+      display: block;
+    }
+
+    .feature-item h3 {
+      color: #3E2723;
+      margin-bottom: 20px;
+      font-family: 'Cinzel Decorative', serif;
+      font-size: 1.5rem;
+    }
+
+    .feature-item p {
+      font-size: 1.1rem;
+    }
+
+    /* Subsol */
+    footer {
+      background-color: #3E2723;
+      color: #D7CCC8;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 0.95rem;
+      border-top: 1px solid #8D6E63;
+    }
+
+    footer p {
+      letter-spacing: 0.5px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.4rem;
+      }
+
+      .tagline {
+        font-size: 1.2rem;
+      }
+
+      .cta-button {
+        padding: 15px 25px;
+        font-size: 1rem;
+      }
+
+      .features h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <h1>Consultanță Juridică Premium</h1>
-                <p class="tagline">Soluții legale personalizate prin consultanță video sigură</p>
-               <a href="programeaza-consultatia.html" class="cta-button">Programează consultația</a>
-                <a href="/despre.html" class="cta-button">Despre concept</a>
-            </div>
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <h1>Consultanță Juridică Premium</h1>
+        <p class="tagline">Soluții legale personalizate prin consultanță video sigură</p>
+        <a href="programeaza-consultatia.html" class="cta-button">Programează consultația</a>
+        <a href="/despre.html" class="cta-button">Despre concept</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="schedule">
+    <div class="container">
+      <h2>Program Consultanțe</h2>
+      <table class="calendar-table">
+        <thead>
+          <tr>
+            <th>Luni</th>
+            <th>Marți</th>
+            <th>Miercuri</th>
+            <th>Joi</th>
+            <th>Vineri</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>15:00 - 19:00</td>
+            <td>15:00 - 19:00</td>
+            <td>15:00 - 19:00</td>
+            <td>15:00 - 19:00</td>
+            <td>15:00 - 19:00</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="timezone-note">🕒 Toate orele afișate sunt în fusul orar România (GMT+3).</p>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <h2>Serviciile Noastre</h2>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <i class="fas fa-gavel"></i>
+          <h3>Expertiză de Excepție</h3>
+          <p>Peste 20 de ani de experiență în practica juridică, disponibilă prin platforme de conferințe video.</p>
         </div>
-    </header>
-   <section class="schedule">
-  <div class="container">
-    <h2>Program Consultanțe</h2>
-    <table class="calendar-table">
-      <thead>
-        <tr>
-          <th>Luni</th>
-          <th>Marți</th>
-          <th>Miercuri</th>
-          <th>Joi</th>
-          <th>Vineri</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>15:00 - 19:00</td>
-          <td>15:00 - 19:00</td>
-          <td>15:00 - 19:00</td>
-          <td>15:00 - 19:00</td>
-          <td>15:00 - 19:00</td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="timezone-note">🕒 Toate orele afișate sunt în fusul orar România (GMT+3).</p>
-  </div>
-</section>
-    <section class="features">
-        <div class="container">
-            <h2>Serviciile Noastre</h2>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <i class="fas fa-gavel"></i>
-                    <h3>Expertiză de Excepție</h3>
-                    <p>Peste 20 de ani de experiență în practica juridică, disponibilă prin platforme de conferințe video.</p>
-                </div>
-                
-                <div class="feature-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Confidențialitate Absolută</h3>
-                    <p>Secretul profesional asigurat prin conexiuni criptate pe Zoom și Microsoft Teams.</p>
-                </div>
-                
-                <div class="feature-item">
-                    <i class="fas fa-hourglass-half"></i>
-                    <h3>Răspuns Rapid</h3>
-                    <p>Programări în maximum 24 de ore pentru situații urgente, fără compromisuri calitative.</p>
-                </div>
-            </div>
+        <div class="feature-item">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Confidențialitate Absolută</h3>
+          <p>Secretul profesional asigurat prin conexiuni criptate pe Zoom și Microsoft Teams.</p>
         </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>© 2023 Cabinet Avocat Alice Strecheanu. Toate drepturile rezervate.</p>
+        <div class="feature-item">
+          <i class="fas fa-hourglass-half"></i>
+          <h3>Răspuns Rapid</h3>
+          <p>Programări în maximum 24 de ore pentru situații urgente, fără compromisuri calitative.</p>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2023 Cabinet Avocat Alice Strecheanu. Toate drepturile rezervate.</p>
+    </div>
+  </footer>
 </body>
 </html>
