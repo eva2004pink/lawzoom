@@ -7,6 +7,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    .schedule {
+    padding: 60px 0;
+    background-color: #EFEBE9;
+    text-align: center;
+}
+
+.schedule h2 {
+    font-size: 2.2rem;
+    color: #3E2723;
+    margin-bottom: 30px;
+    font-family: 'Cinzel Decorative', serif;
+}
+
+.calendar-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #F5F0E5;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.calendar-table th,
+.calendar-table td {
+    padding: 18px;
+    border: 1px solid #D7CCC8;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #5D4037;
+    font-family: 'Cormorant Garamond', serif;
+}
+.timezone-note {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #5D4037;
+    font-style: italic;
+    opacity: 0.85;
+}
+
     <style>
         /* Stiluri globale */
         * {
@@ -199,7 +238,32 @@
             </div>
         </div>
     </header>
-    
+   <section class="schedule">
+  <div class="container">
+    <h2>Program Consultanțe</h2>
+    <table class="calendar-table">
+      <thead>
+        <tr>
+          <th>Luni</th>
+          <th>Marți</th>
+          <th>Miercuri</th>
+          <th>Joi</th>
+          <th>Vineri</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>15:00 - 19:00</td>
+          <td>15:00 - 19:00</td>
+          <td>15:00 - 19:00</td>
+          <td>15:00 - 19:00</td>
+          <td>15:00 - 19:00</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="timezone-note">🕒 Toate orele afișate sunt în fusul orar România (GMT+3).</p>
+  </div>
+</section>
     <section class="features">
         <div class="container">
             <h2>Serviciile Noastre</h2>
